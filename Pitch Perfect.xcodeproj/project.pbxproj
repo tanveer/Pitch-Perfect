@@ -8,20 +8,28 @@
 
 /* Begin PBXBuildFile section */
 		A1CB8BDD1BED60E0006B7538 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1CB8BDC1BED60E0006B7538 /* AppDelegate.swift */; };
-		A1CB8BDF1BED60E0006B7538 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1CB8BDE1BED60E0006B7538 /* ViewController.swift */; };
+		A1CB8BDF1BED60E0006B7538 /* RecorderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1CB8BDE1BED60E0006B7538 /* RecorderViewController.swift */; };
 		A1CB8BE21BED60E0006B7538 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A1CB8BE01BED60E0006B7538 /* Main.storyboard */; };
 		A1CB8BE41BED60E0006B7538 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A1CB8BE31BED60E0006B7538 /* Assets.xcassets */; };
 		A1CB8BE71BED60E0006B7538 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A1CB8BE51BED60E0006B7538 /* LaunchScreen.storyboard */; };
+		A1CB8BEF1BED62B4006B7538 /* microphone-iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = A1CB8BEE1BED62B4006B7538 /* microphone-iphone.png */; };
+		A1CB8BF11BEE2A80006B7538 /* PlayAudioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1CB8BF01BEE2A80006B7538 /* PlayAudioViewController.swift */; };
+		A1CB8BF31BEE2E9B006B7538 /* movie_quote.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A1CB8BF21BEE2E9B006B7538 /* movie_quote.mp3 */; };
+		A1CB8BF51BEE6064006B7538 /* AudioData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1CB8BF41BEE6064006B7538 /* AudioData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		A1CB8BD91BED60E0006B7538 /* Pitch Perfect.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Pitch Perfect.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1CB8BDC1BED60E0006B7538 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		A1CB8BDE1BED60E0006B7538 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		A1CB8BDE1BED60E0006B7538 /* RecorderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecorderViewController.swift; sourceTree = "<group>"; };
 		A1CB8BE11BED60E0006B7538 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A1CB8BE31BED60E0006B7538 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A1CB8BE61BED60E0006B7538 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A1CB8BE81BED60E0006B7538 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A1CB8BEE1BED62B4006B7538 /* microphone-iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "microphone-iphone.png"; sourceTree = "<group>"; };
+		A1CB8BF01BEE2A80006B7538 /* PlayAudioViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayAudioViewController.swift; sourceTree = "<group>"; };
+		A1CB8BF21BEE2E9B006B7538 /* movie_quote.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = movie_quote.mp3; sourceTree = "<group>"; };
+		A1CB8BF41BEE6064006B7538 /* AudioData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,11 +63,15 @@
 			isa = PBXGroup;
 			children = (
 				A1CB8BDC1BED60E0006B7538 /* AppDelegate.swift */,
-				A1CB8BDE1BED60E0006B7538 /* ViewController.swift */,
+				A1CB8BDE1BED60E0006B7538 /* RecorderViewController.swift */,
+				A1CB8BF41BEE6064006B7538 /* AudioData.swift */,
+				A1CB8BF01BEE2A80006B7538 /* PlayAudioViewController.swift */,
 				A1CB8BE01BED60E0006B7538 /* Main.storyboard */,
 				A1CB8BE31BED60E0006B7538 /* Assets.xcassets */,
+				A1CB8BEE1BED62B4006B7538 /* microphone-iphone.png */,
 				A1CB8BE51BED60E0006B7538 /* LaunchScreen.storyboard */,
 				A1CB8BE81BED60E0006B7538 /* Info.plist */,
+				A1CB8BF21BEE2E9B006B7538 /* movie_quote.mp3 */,
 			);
 			path = "Pitch Perfect";
 			sourceTree = "<group>";
@@ -122,7 +134,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A1CB8BEF1BED62B4006B7538 /* microphone-iphone.png in Resources */,
 				A1CB8BE71BED60E0006B7538 /* LaunchScreen.storyboard in Resources */,
+				A1CB8BF31BEE2E9B006B7538 /* movie_quote.mp3 in Resources */,
 				A1CB8BE41BED60E0006B7538 /* Assets.xcassets in Resources */,
 				A1CB8BE21BED60E0006B7538 /* Main.storyboard in Resources */,
 			);
@@ -135,8 +149,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A1CB8BDF1BED60E0006B7538 /* ViewController.swift in Sources */,
+				A1CB8BDF1BED60E0006B7538 /* RecorderViewController.swift in Sources */,
 				A1CB8BDD1BED60E0006B7538 /* AppDelegate.swift in Sources */,
+				A1CB8BF51BEE6064006B7538 /* AudioData.swift in Sources */,
+				A1CB8BF11BEE2A80006B7538 /* PlayAudioViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
