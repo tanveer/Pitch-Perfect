@@ -16,7 +16,6 @@ class PlayAudioViewController: UIViewController {
     @IBOutlet weak var fastButton: UIButton!
     @IBOutlet weak var darthVader: UIButton!
     var audioPlayer:AVAudioPlayer!
-    var audioFiles:[NSURL] = []
     var audioData:AudioData!
     var audioEngine:AVAudioEngine!
     var audioFile:AVAudioFile!
@@ -30,14 +29,12 @@ class PlayAudioViewController: UIViewController {
     }
 
     @IBAction func playSlowAudio(sender: UIButton) {
-        audioEngine.stop()
-        audioEngine.reset()
+        audioEngineStopReset(andAudioPlayerStop: audioPlayer)
         audioControl(0.5)
     }
     
     @IBAction func playFastAudio(sender: UIButton) {
-        audioEngine.stop()
-        audioEngine.reset()
+        audioEngineStopReset(andAudioPlayerStop: audioPlayer)
         audioControl(1.5)
     }
     
@@ -50,8 +47,7 @@ class PlayAudioViewController: UIViewController {
     }
     
     @IBAction func stopPlayingAudio(sender: UIButton) {
-        audioPlayer.stop()
-        stateOfButton(true)
+        audioEngineStopReset(andAudioPlayerStop: audioPlayer)
     }
     
     //MARK:- Helper methods
@@ -77,10 +73,19 @@ class PlayAudioViewController: UIViewController {
         audioPlayer.play()
     }
     
-    func stateOfButton(state:Bool) {
-        fastButton.enabled = state
-        slowButton.enabled = state
-        chipMunk.enabled = state
-        darthVader.enabled = state
+    func audioEngineStopReset(andAudioPlayerStop aPlayer:AVAudioPlayer){
+        audioEngine.stop()
+        audioEngine.reset()
+        aPlayer.stop()
+        let audioNode = AVAudioPlayerNode()
+        audioEngine.attachNode(audioNode)
+        let audioReverb = AVAudioUnitReverb()
+        audioReverb.loadFactoryPreset(AVAudioUnitReverbPreset.LargeChamber)
+        audioReverb.wetDryMix = 50
+        audioEngine.attachNode(audioReverb)
+        audioEngine.connect(audioNode, to: audioReverb, format: nil)
+        audioEngine.connect(audioReverb, to: audioEngine.outputNode, format: nil)
+        try! audioEngine.start()
+        audioNode.play()
     }
 }

@@ -47,30 +47,6 @@
                                     <action selector="recordAudion:" destination="BYZ-38-t0r" eventType="touchUpInside" id="V56-Ps-Ls1"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xZc-Ae-Kh1">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <animations/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="50" id="Knw-dC-ELX"/>
-                                    <constraint firstAttribute="height" constant="50" id="ToS-G2-6gT"/>
-                                </constraints>
-                                <state key="normal" image="stop@2x-iphone"/>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="Knw-dC-ELX"/>
-                                        <exclude reference="ToS-G2-6gT"/>
-                                    </mask>
-                                </variation>
-                                <variation key="widthClass=compact">
-                                    <mask key="constraints">
-                                        <include reference="Knw-dC-ELX"/>
-                                        <include reference="ToS-G2-6gT"/>
-                                    </mask>
-                                </variation>
-                                <connections>
-                                    <action selector="stopRecordingButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="oRA-s5-Bxx"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap to Record" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u17-3T-e5p">
                                 <rect key="frame" x="-42" y="-21" width="42" height="21"/>
                                 <animations/>
@@ -78,6 +54,56 @@
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xZc-Ae-Kh1">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="6rh-BH-LgD"/>
+                                    <constraint firstAttribute="width" constant="50" id="j9v-m9-BBg"/>
+                                </constraints>
+                                <state key="normal" image="stop@2x-iphone"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="6rh-BH-LgD"/>
+                                        <exclude reference="j9v-m9-BBg"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="6rh-BH-LgD"/>
+                                        <include reference="j9v-m9-BBg"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="stopRecordingButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="oRA-s5-Bxx"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Xt-mR-DVH">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <animations/>
+                                <color key="backgroundColor" red="0.10196078431372549" green="0.2196078431372549" blue="0.36078431372549019" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="lNY-0s-5dS"/>
+                                    <constraint firstAttribute="height" constant="50" id="prm-rJ-1kT"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="12"/>
+                                <state key="normal" title="Pause"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="lNY-0s-5dS"/>
+                                        <exclude reference="prm-rJ-1kT"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="lNY-0s-5dS"/>
+                                        <include reference="prm-rJ-1kT"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="pauseBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4yL-tf-fVM"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" red="1" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -91,37 +117,49 @@
                             <constraint firstItem="u17-3T-e5p" firstAttribute="top" secondItem="1cr-XE-7Jn" secondAttribute="bottom" constant="18" id="Ofx-PR-fUd">
                                 <variation key="widthClass=compact" constant="21"/>
                             </constraint>
-                            <constraint firstItem="xZc-Ae-Kh1" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="gPq-YE-BUq"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="xZc-Ae-Kh1" secondAttribute="bottom" constant="53" id="tL8-Tf-QJk"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="xZc-Ae-Kh1" secondAttribute="bottom" constant="60" id="hsq-Ma-WCJ"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="6Xt-mR-DVH" secondAttribute="bottom" constant="60" id="nGp-08-HvV"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="6Xt-mR-DVH" secondAttribute="trailing" constant="107" id="nxa-hQ-UtT">
+                                <variation key="widthClass=compact" constant="100"/>
+                            </constraint>
+                            <constraint firstItem="xZc-Ae-Kh1" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="108" id="sAO-qT-yi0">
+                                <variation key="widthClass=compact" constant="100"/>
+                            </constraint>
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="1cr-XE-7Jn"/>
-                                <exclude reference="xZc-Ae-Kh1"/>
                                 <exclude reference="u17-3T-e5p"/>
+                                <exclude reference="xZc-Ae-Kh1"/>
+                                <exclude reference="6Xt-mR-DVH"/>
                             </mask>
                             <mask key="constraints">
                                 <exclude reference="BmL-5M-9el"/>
                                 <exclude reference="EnW-Cu-xkz"/>
                                 <exclude reference="I7U-15-xkW"/>
                                 <exclude reference="Ofx-PR-fUd"/>
-                                <exclude reference="gPq-YE-BUq"/>
-                                <exclude reference="tL8-Tf-QJk"/>
+                                <exclude reference="sAO-qT-yi0"/>
+                                <exclude reference="nxa-hQ-UtT"/>
+                                <exclude reference="hsq-Ma-WCJ"/>
+                                <exclude reference="nGp-08-HvV"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
                                 <include reference="1cr-XE-7Jn"/>
-                                <include reference="xZc-Ae-Kh1"/>
                                 <include reference="u17-3T-e5p"/>
+                                <include reference="xZc-Ae-Kh1"/>
+                                <include reference="6Xt-mR-DVH"/>
                             </mask>
                             <mask key="constraints">
                                 <include reference="BmL-5M-9el"/>
                                 <include reference="EnW-Cu-xkz"/>
                                 <include reference="I7U-15-xkW"/>
                                 <include reference="Ofx-PR-fUd"/>
-                                <include reference="gPq-YE-BUq"/>
-                                <include reference="tL8-Tf-QJk"/>
+                                <include reference="sAO-qT-yi0"/>
+                                <include reference="nxa-hQ-UtT"/>
+                                <include reference="hsq-Ma-WCJ"/>
+                                <include reference="nGp-08-HvV"/>
                             </mask>
                         </variation>
                     </view>
